@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2MQ-dT-i2y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fG2-vl-65I">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -46,6 +46,7 @@
                                 <state key="normal" title="Enviar"/>
                                 <connections>
                                     <action selector="btnEnviar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4N6-P2-DOi"/>
+                                    <segue destination="XG7-cq-CL7" kind="presentation" identifier="resultadoSelecciona" id="HVh-T8-lzf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -57,12 +58,60 @@
                         <outlet property="posiblesRespuestas" destination="wGm-0l-QJo" id="FFE-9Y-NrF"/>
                         <outlet property="respuesta" destination="DXl-Ki-dB8" id="Q6j-LE-pJF"/>
                         <outlet property="score" destination="pn6-Fh-VnV" id="DLl-HN-cf8"/>
-                        <segue destination="xEQ-w4-h8A" kind="presentation" identifier="resultadoSelecciona" id="bh9-eN-d8U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="Xc5-cM-WIP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="141" y="80"/>
+            <point key="canvasLocation" x="906.25" y="79.6875"/>
+        </scene>
+        <!--View Controller Result Selecciona-->
+        <scene sceneID="pyp-LN-w3c">
+            <objects>
+                <viewController id="XG7-cq-CL7" customClass="ViewControllerResultSelecciona" customModule="FunGro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jTB-le-Lex">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6p-U6-EfD">
+                                <rect key="frame" x="332" y="497" width="105" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="juega de nuevo"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NL5-wq-xGt">
+                                <rect key="frame" x="334" y="635" width="101" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="menu principal"/>
+                                <connections>
+                                    <action selector="menuPrincipal:" destination="XG7-cq-CL7" eventType="touchUpInside" id="ZWF-79-GZy"/>
+                                    <segue destination="Xc5-cM-WIP" kind="unwind" unwindAction="unwindResultSeleccionaFor:sender:" id="XKr-ZN-dMo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tu puntuación" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5BQ-VL-ZBB">
+                                <rect key="frame" x="361" y="245" width="109" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tu puntuación" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XT6-hf-6jg">
+                                <rect key="frame" x="361" y="245" width="109" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hKH-2K-fzi"/>
+                    </view>
+                    <connections>
+                        <outlet property="lbPuntaje" destination="XT6-hf-6jg" id="HrG-xw-G4H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="26F-aN-JHI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1663" y="80"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="w5H-Dy-MYA">
@@ -92,10 +141,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0Ox-X9-EF5"/>
                     </view>
+                    <navigationItem key="navigationItem" id="h68-Yt-S8d"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zQB-Rl-xBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-666" y="-311"/>
+            <point key="canvasLocation" x="99.21875" y="-311.1328125"/>
         </scene>
         <!--View Controller Result-->
         <scene sceneID="aFk-9P-aQE">
@@ -131,6 +181,7 @@
                                 <state key="normal" title="menu principal"/>
                                 <connections>
                                     <action selector="menuPrincipal:" destination="xEQ-w4-h8A" eventType="touchUpInside" id="Y26-Vu-mYC"/>
+                                    <segue destination="B1w-ta-uBC" kind="unwind" unwindAction="unwindResultEscribeFor:sender:" id="aVP-Do-b0r"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -143,7 +194,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VHv-Kk-M30" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="895" y="-282"/>
+            <point key="canvasLocation" x="1664" y="-615"/>
         </scene>
         <!--Escribe View Controller-->
         <scene sceneID="wvB-W9-quF">
@@ -198,11 +249,27 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LLX-6m-7oS" sceneMemberID="firstResponder"/>
+                <exit id="B1w-ta-uBC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="140.625" y="-615.234375"/>
+            <point key="canvasLocation" x="906.25" y="-615.234375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="22S-Mv-cAn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fG2-vl-65I" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aFe-ZT-kG7">
+                        <rect key="frame" x="0.0" y="20" width="768" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2MQ-dT-i2y" kind="relationship" relationship="rootViewController" id="Jjj-85-9Fb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hg5-Gk-EqO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-666.40625" y="-311.1328125"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="d2B-lO-fDb"/>
-    </inferredMetricsTieBreakers>
 </document>

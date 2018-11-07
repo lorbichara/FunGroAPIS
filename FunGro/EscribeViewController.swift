@@ -19,12 +19,13 @@ class EscribeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imgPregunta.image = UIImage(named: Juego.juego.arrPreguntasEscribe[Juego.juego.indiceEscribe])
-        selectedOption = Juego.juego.arrPreguntasEscribe[Juego.juego.indiceEscribe]
+        definesPresentationContext = true
+        nuevaPregunta()
     }
     
     func nuevaPregunta() {
-        if(Juego.juego.indiceEscribe == 1) { //SI HAY MAS GRUPOS ESTA CONDICIÓN CAMBIA
+        print("Nueva pregunta \(Juego.juego.indiceEscribe)")
+        if(Juego.juego.indiceEscribe == 2) { //SI HAY MAS GRUPOS ESTA CONDICIÓN CAMBIA
             self.performSegue(withIdentifier: "resultadoEscribe", sender: self)
         }
         else{
@@ -37,22 +38,12 @@ class EscribeViewController: UIViewController {
     
     @IBAction func enviar(_ sender: Any) {
         if(selectedOption == tfEscribe.text && Juego.juego.intentoEscribe == 0) {
-            let alert = UIAlertController(title: "Respuesta correcta", message: "Siguiente pregunta", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(alert: UIAlertAction!) in print("Foo")
-                self.navigationController?.popViewController(animated: true)
-            }))
-            
             Juego.juego.puntuacionEscribe += 10
             Juego.juego.indiceEscribe += 1
             Juego.juego.intentoEscribe = 0
             nuevaPregunta()
         }
         else if (selectedOption == tfEscribe.text && Juego.juego.intentoEscribe == 1){
-            let alert = UIAlertController(title: "Respuesta correcta", message: "Siguiente pregunta", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(alert: UIAlertAction!) in print("Foo")
-                self.navigationController?.popViewController(animated: true)
-            }))
-            
             Juego.juego.puntuacionEscribe += 5
             Juego.juego.indiceEscribe += 1
             Juego.juego.intentoEscribe = 0
@@ -67,15 +58,21 @@ class EscribeViewController: UIViewController {
             
             Juego.juego.intentoEscribe = 1
         }
+        else if ((selectedOption != tfEscribe.text && Juego.juego.indiceEscribe == 1)){
+            Juego.juego.indiceEscribe += 1
+            Juego.juego.intentoEscribe = 0
+            nuevaPregunta()
+        }
         else {
             let alert = UIAlertController(title: "Respuesta incorrecta", message: "Siguiente pregunta", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(alert: UIAlertAction!) in print("Foo")
                 self.navigationController?.popViewController(animated: true)
             }))
             present(alert, animated: true, completion: nil)
-            
+            print(Juego.juego.indiceEscribe)
             Juego.juego.indiceEscribe += 1
             Juego.juego.intentoEscribe = 0
+            print(Juego.juego.indiceEscribe)
             nuevaPregunta()
         }
     }
@@ -87,5 +84,9 @@ class EscribeViewController: UIViewController {
         Juego.juego.arrPreguntasEscribe.shuffle()
         Juego.juego.indiceEscribe = 0
         Juego.juego.intentoEscribe = 0
+    }
+    
+    @IBAction func unwindResultEscribe(for segue: UIStoryboardSegue, sender: Any?){
+        self.dismiss(animated: true, completion: nil)
     }
 }

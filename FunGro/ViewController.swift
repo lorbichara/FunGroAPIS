@@ -64,22 +64,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBAction func btnEnviar(_ sender: Any) {
         if(selectedOption == elemento.text && Juego.juego.intentoSelecciona == 0) {
-            let alert = UIAlertController(title: "Respuesta correcta", message: "Siguiente pregunta", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(alert: UIAlertAction!) in print("Foo")
-                self.navigationController?.popViewController(animated: true)
-            }))
-            
             Juego.juego.puntuacionSelecciona += 10
             Juego.juego.indiceSelecciona += 1
             Juego.juego.intentoSelecciona = 0
             nuevaPregunta()
         }
         else if (selectedOption == elemento.text && Juego.juego.intentoSelecciona == 1){
-            let alert = UIAlertController(title: "Respuesta correcta", message: "Siguiente pregunta", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(alert: UIAlertAction!) in print("Foo")
-                self.navigationController?.popViewController(animated: true)
-            }))
-            
             Juego.juego.puntuacionSelecciona += 5
             Juego.juego.indiceSelecciona += 1
             Juego.juego.intentoSelecciona = 0
@@ -93,6 +83,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             present(alert, animated: true, completion: nil)
             
             Juego.juego.intentoSelecciona = 1
+        }
+        else if ((selectedOption != elemento.text && Juego.juego.indiceSelecciona == 1)){
+            Juego.juego.indiceSelecciona += 1
+            Juego.juego.intentoSelecciona = 0
+            nuevaPregunta()
         }
         else {
             let alert = UIAlertController(title: "Respuesta incorrecta", message: "Siguiente pregunta", preferredStyle: .alert)
@@ -108,7 +103,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func nuevaPregunta() {
-        if(Juego.juego.indiceSelecciona == 1) { //SI HAY MAS GRUPOS ESTA CONDICIÓN CAMBIA
+        if(Juego.juego.indiceSelecciona == 2) { //SI HAY MAS GRUPOS ESTA CONDICIÓN CAMBIA
             self.performSegue(withIdentifier: "resultadoSelecciona", sender: self)
         }
         else{
@@ -120,10 +115,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vistaResultado = segue.destination as! ViewControllerResult
+        let vistaResultado = segue.destination as! ViewControllerResultSelecciona
         vistaResultado.label = Juego.juego.puntuacionSelecciona
     }
     
-
+    @IBAction func unwindResultSelecciona(for segue: UIStoryboardSegue, sender: Any?){
+        
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 

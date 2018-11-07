@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D798C6521932EF900676E4D /* EscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D798C6421932EF900676E4D /* EscribeViewController.swift */; };
+		4D798C6B21935E0600676E4D /* ViewControllerResultSelecciona.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D798C6A21935E0600676E4D /* ViewControllerResultSelecciona.swift */; };
 		758DC20D218F714F007A50E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758DC20C218F714F007A50E6 /* AppDelegate.swift */; };
 		758DC20F218F714F007A50E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758DC20E218F714F007A50E6 /* ViewController.swift */; };
 		758DC212218F7150007A50E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758DC210218F7150007A50E6 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		4D798C6421932EF900676E4D /* EscribeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscribeViewController.swift; sourceTree = "<group>"; };
+		4D798C6A21935E0600676E4D /* ViewControllerResultSelecciona.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerResultSelecciona.swift; sourceTree = "<group>"; };
 		758DC209218F714F007A50E6 /* FunGro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunGro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		758DC20C218F714F007A50E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		758DC20E218F714F007A50E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				758DC218218F7151007A50E6 /* LaunchScreen.storyboard */,
 				758DC21B218F7151007A50E6 /* Info.plist */,
 				758DC213218F7150007A50E6 /* FunGro.xcdatamodeld */,
+				4D798C6A21935E0600676E4D /* ViewControllerResultSelecciona.swift */,
 			);
 			path = FunGro;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D798C6B21935E0600676E4D /* ViewControllerResultSelecciona.swift in Sources */,
 				758DC224218F77B0007A50E6 /* Juego.swift in Sources */,
 				758DC215218F7150007A50E6 /* FunGro.xcdatamodeld in Sources */,
 				758DC20F218F714F007A50E6 /* ViewController.swift in Sources */,
