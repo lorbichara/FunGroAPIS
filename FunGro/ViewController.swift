@@ -63,7 +63,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     @IBAction func btnEnviar(_ sender: Any) {
-        if(selectedOption == elemento.text && Juego.juego.intento == 0) {
+        if(selectedOption == elemento.text && Juego.juego.intentoSelecciona == 0) {
             let alert = UIAlertController(title: "Respuesta correcta", message: "Siguiente pregunta", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(alert: UIAlertAction!) in print("Foo")
                 self.navigationController?.popViewController(animated: true)
@@ -71,10 +71,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             Juego.juego.puntuacionSelecciona += 10
             Juego.juego.indiceSelecciona += 1
-            Juego.juego.intento = 0
+            Juego.juego.intentoSelecciona = 0
             nuevaPregunta()
         }
-        else if (selectedOption == elemento.text && Juego.juego.intento == 1){
+        else if (selectedOption == elemento.text && Juego.juego.intentoSelecciona == 1){
             let alert = UIAlertController(title: "Respuesta correcta", message: "Siguiente pregunta", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(alert: UIAlertAction!) in print("Foo")
                 self.navigationController?.popViewController(animated: true)
@@ -82,17 +82,17 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             Juego.juego.puntuacionSelecciona += 5
             Juego.juego.indiceSelecciona += 1
-            Juego.juego.intento = 0
+            Juego.juego.intentoSelecciona = 0
             nuevaPregunta()
         }
-        else if (selectedOption != elemento.text && Juego.juego.intento == 0){
+        else if (selectedOption != elemento.text && Juego.juego.intentoSelecciona == 0){
             let alert = UIAlertController(title: "Respuesta incorrecta", message: "¡Inténtalo de nuevo!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(alert: UIAlertAction!) in print("Foo")
                 self.navigationController?.popViewController(animated: true)
             }))
             present(alert, animated: true, completion: nil)
             
-            Juego.juego.intento = 1
+            Juego.juego.intentoSelecciona = 1
         }
         else {
             let alert = UIAlertController(title: "Respuesta incorrecta", message: "Siguiente pregunta", preferredStyle: .alert)
@@ -102,13 +102,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             present(alert, animated: true, completion: nil)
             
             Juego.juego.indiceSelecciona += 1
-            Juego.juego.intento = 0
+            Juego.juego.intentoSelecciona = 0
             nuevaPregunta()
         }
     }
     
     func nuevaPregunta() {
-        if(Juego.juego.indiceSelecciona == 5) { //SI HAY MAS GRUPOS ESTA CONDICIÓN CAMBIA
+        if(Juego.juego.indiceSelecciona == 1) { //SI HAY MAS GRUPOS ESTA CONDICIÓN CAMBIA
             self.performSegue(withIdentifier: "resultadoSelecciona", sender: self)
         }
         else{

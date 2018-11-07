@@ -17,7 +17,8 @@ class Juego: Codable {
     var puntuacionSelecciona : Int
     var indiceEscribe : Int
     var indiceSelecciona : Int
-    var intento : Int
+    var intentoEscribe : Int
+    var intentoSelecciona : Int
 
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
     static let ArchiveURL = DocumentsDirectory.appendingPathComponent("juego")
@@ -31,7 +32,8 @@ class Juego: Codable {
         self.arrPreguntasSelecciona.shuffle()
         self.indiceEscribe = indiceEscribe
         self.indiceSelecciona = indiceSelecciona
-        self.intento = 0
+        self.intentoEscribe = 0
+        self.intentoSelecciona = 0
     }
     
     init() {
@@ -43,7 +45,8 @@ class Juego: Codable {
         self.arrPreguntasSelecciona.shuffle()
         self.indiceEscribe = 0
         self.indiceSelecciona = 0
-        self.intento = 0
+        self.intentoEscribe = 0
+        self.intentoSelecciona = 0
     }
     
     //persistencia de juego

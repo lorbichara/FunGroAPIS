@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D798C6521932EF900676E4D /* EscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D798C6421932EF900676E4D /* EscribeViewController.swift */; };
 		758DC20D218F714F007A50E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758DC20C218F714F007A50E6 /* AppDelegate.swift */; };
 		758DC20F218F714F007A50E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758DC20E218F714F007A50E6 /* ViewController.swift */; };
 		758DC212218F7150007A50E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758DC210218F7150007A50E6 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D798C6421932EF900676E4D /* EscribeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscribeViewController.swift; sourceTree = "<group>"; };
 		758DC209218F714F007A50E6 /* FunGro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunGro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		758DC20C218F714F007A50E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		758DC20E218F714F007A50E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				758DC20C218F714F007A50E6 /* AppDelegate.swift */,
 				758DC20E218F714F007A50E6 /* ViewController.swift */,
 				758DC210218F7150007A50E6 /* Main.storyboard */,
+				4D798C6421932EF900676E4D /* EscribeViewController.swift */,
 				758DC225218F9E79007A50E6 /* ViewControllerResult.swift */,
 				758DC223218F77B0007A50E6 /* Juego.swift */,
 				758DC216218F7151007A50E6 /* Assets.xcassets */,
@@ -148,6 +151,7 @@
 				758DC215218F7150007A50E6 /* FunGro.xcdatamodeld in Sources */,
 				758DC20F218F714F007A50E6 /* ViewController.swift in Sources */,
 				758DC226218F9E79007A50E6 /* ViewControllerResult.swift in Sources */,
+				4D798C6521932EF900676E4D /* EscribeViewController.swift in Sources */,
 				758DC20D218F714F007A50E6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

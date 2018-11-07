@@ -29,6 +29,9 @@ class ViewControllerResult: UIViewController {
         present(activityVC, animated: true, completion: nil)
     }
     
+    @IBAction func menuPrincipal(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     
     
 }
