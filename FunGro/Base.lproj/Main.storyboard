@@ -46,7 +46,6 @@
                                 <state key="normal" title="Enviar"/>
                                 <connections>
                                     <action selector="btnEnviar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4N6-P2-DOi"/>
-                                    <segue destination="XG7-cq-CL7" kind="presentation" identifier="resultadoSelecciona" id="HVh-T8-lzf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -58,6 +57,7 @@
                         <outlet property="posiblesRespuestas" destination="wGm-0l-QJo" id="FFE-9Y-NrF"/>
                         <outlet property="respuesta" destination="DXl-Ki-dB8" id="Q6j-LE-pJF"/>
                         <outlet property="score" destination="pn6-Fh-VnV" id="DLl-HN-cf8"/>
+                        <segue destination="XG7-cq-CL7" kind="presentation" identifier="resultadoSelecciona" id="cJ4-vw-K2J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -87,20 +87,21 @@
                                     <segue destination="Xc5-cM-WIP" kind="unwind" unwindAction="unwindResultSeleccionaFor:sender:" id="XKr-ZN-dMo"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tu puntuación" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5BQ-VL-ZBB">
-                                <rect key="frame" x="361" y="245" width="109" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tu puntuación" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XT6-hf-6jg">
-                                <rect key="frame" x="361" y="245" width="109" height="21"/>
+                                <rect key="frame" x="326" y="292" width="109" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vid-JO-f4x">
+                                <rect key="frame" x="132" y="113" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Share"/>
+                                <connections>
+                                    <action selector="btnCompartir:" destination="XG7-cq-CL7" eventType="touchUpInside" id="2O6-7M-dMs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="hKH-2K-fzi"/>

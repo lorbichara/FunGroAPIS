@@ -63,6 +63,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     @IBAction func btnEnviar(_ sender: Any) {
+        print(Juego.juego.intentoSelecciona)
         if(selectedOption == elemento.text && Juego.juego.intentoSelecciona == 0) {
             Juego.juego.puntuacionSelecciona += 10
             Juego.juego.indiceSelecciona += 1
@@ -84,7 +85,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             Juego.juego.intentoSelecciona = 1
         }
-        else if ((selectedOption != elemento.text && Juego.juego.indiceSelecciona == 1)){
+        else if (selectedOption != elemento.text && Juego.juego.indiceSelecciona == 1){
             Juego.juego.indiceSelecciona += 1
             Juego.juego.intentoSelecciona = 0
             nuevaPregunta()
@@ -117,6 +118,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vistaResultado = segue.destination as! ViewControllerResultSelecciona
         vistaResultado.label = Juego.juego.puntuacionSelecciona
+        Juego.juego.arrPreguntasSelecciona.shuffle()
+        Juego.juego.indiceSelecciona = 0
+        Juego.juego.intentoSelecciona = 0
+        Juego.juego.puntuacionSelecciona = 0
     }
     
     @IBAction func unwindResultSelecciona(for segue: UIStoryboardSegue, sender: Any?){
