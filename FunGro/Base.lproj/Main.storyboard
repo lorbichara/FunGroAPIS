@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fG2-vl-65I">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fG2-vl-65I">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -169,6 +168,9 @@
                                 <rect key="frame" x="209" y="561" width="350" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="juega de nuevo" image="playagainbtn"/>
+                                <connections>
+                                    <action selector="voverJugar:" destination="XG7-cq-CL7" eventType="touchUpInside" id="Pm2-yA-Dq2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NL5-wq-xGt">
                                 <rect key="frame" x="209" y="674" width="350" height="105"/>
@@ -280,6 +282,9 @@
                                 <rect key="frame" x="209" y="572" width="350" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="juega de nuevo" image="playagainbtn"/>
+                                <connections>
+                                    <action selector="voverJugar:" destination="xEQ-w4-h8A" eventType="touchUpInside" id="2oe-Pi-zxE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67b-VE-20o">
                                 <rect key="frame" x="548" y="944" width="200" height="60"/>
@@ -337,7 +342,11 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="9h7-bG-gtj"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="l3D-m0-zQJ" appends="YES" id="4m7-Uf-TIq"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="imgPregunta" destination="xfd-td-V4z" id="Neh-Ty-Eeq"/>
@@ -348,6 +357,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LLX-6m-7oS" sceneMemberID="firstResponder"/>
                 <exit id="B1w-ta-uBC" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="l3D-m0-zQJ"/>
             </objects>
             <point key="canvasLocation" x="906.25" y="-615.234375"/>
         </scene>
@@ -371,14 +381,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="acercadebtn" width="695" height="206"/>
-        <image name="enviarbtn" width="685" height="200"/>
-        <image name="escribebtn" width="691" height="202"/>
-        <image name="logo" width="400" height="216"/>
-        <image name="menubtn" width="689" height="204"/>
-        <image name="playagainbtn" width="693" height="204"/>
-        <image name="seleccionabtn" width="695" height="204"/>
-        <image name="sharebtn" width="689" height="204"/>
+        <image name="acercadebtn" width="333.60000610351562" height="98.879997253417969"/>
+        <image name="enviarbtn" width="328.79998779296875" height="96"/>
+        <image name="escribebtn" width="331.67999267578125" height="97"/>
+        <image name="logo" width="192" height="103.68000030517578"/>
+        <image name="menubtn" width="330.72000122070312" height="97.919998168945312"/>
+        <image name="playagainbtn" width="332.6400146484375" height="97.919998168945312"/>
+        <image name="seleccionabtn" width="333.60000610351562" height="97.919998168945312"/>
+        <image name="sharebtn" width="330.72000122070312" height="97.919998168945312"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Tvk-Q2-RpR"/>

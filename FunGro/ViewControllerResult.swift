@@ -33,8 +33,12 @@ class ViewControllerResult: UIViewController {
     }
     
     @IBAction func menuPrincipal(_ sender: Any) {
+        Juego.juego.volverJugar = false
         self.dismiss(animated: true, completion: nil)
     }
     
-    
+    @IBAction func voverJugar(_ sender: Any) {
+        Juego.juego.volverJugar = true
+        self.dismiss(animated: true, completion: nil)
+    }
 }

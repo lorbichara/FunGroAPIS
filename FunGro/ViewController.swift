@@ -21,6 +21,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.posiblesRespuestas.delegate = self
         self.posiblesRespuestas.dataSource = self
         nuevaPregunta()
@@ -37,6 +38,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 110, height: 60))
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        indImg = row
         
         imageView.image = UIImage(named: imgArr[row])
         view.addSubview(imageView)
@@ -91,7 +93,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             nuevaPregunta()
         }
         else {
-            let alert = UIAlertController(title: "Respuesta incorrecta", message: "Siguiente pregunta", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Respuesta incorrecta", message: "Continua jugando!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(alert: UIAlertAction!) in print("Foo")
                 self.navigationController?.popViewController(animated: true)
             }))
@@ -105,6 +107,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     func nuevaPregunta() {
         if(Juego.juego.indiceSelecciona == 2) { //SI HAY MAS GRUPOS ESTA CONDICIÓN CAMBIA
+            Juego.juego.indiceSelecciona = 0
+            Juego.juego.intentoSelecciona = 0
+            Juego.juego.arrPreguntasSelecciona.shuffle()
+            imgArr = getPickerOptions()
+            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+            
+            imageView.image = UIImage(named: imgArr[indImg])
             self.performSegue(withIdentifier: "resultadoSelecciona", sender: self)
         }
         else{
@@ -122,11 +131,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         Juego.juego.indiceSelecciona = 0
         Juego.juego.intentoSelecciona = 0
         Juego.juego.puntuacionSelecciona = 0
+        score.text = "Score: \(Juego.juego.puntuacionSelecciona)"
     }
     
     @IBAction func unwindResultSelecciona(for segue: UIStoryboardSegue, sender: Any?){
-        
-        self.dismiss(animated: true, completion: nil)
+        if(!Juego.juego.volverJugar){
+            self.dismiss(animated: true, completion: nil)
+        }
     }
+    
+
 }
 

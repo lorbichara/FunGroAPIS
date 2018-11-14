@@ -35,4 +35,9 @@ class ViewControllerResultSelecciona: UIViewController {
     @IBAction func menuPrincipal(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func voverJugar(_ sender: Any) {
+        Juego.juego.volverJugar = true
+        self.dismiss(animated: true, completion: nil)
+    }
 }
