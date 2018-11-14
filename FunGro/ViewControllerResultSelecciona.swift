@@ -23,8 +23,13 @@ class ViewControllerResultSelecciona: UIViewController {
     @IBAction func btnCompartir(_ sender: Any) {
         // set up activity view controller
         let shareText = "Jugué FunGro en modo selecciona y mi puntaje fue: \(String(label))"
-        let activityVC = UIActivityViewController(activityItems: [shareText as Any], applicationActivities: nil)
-        present(activityVC, animated: true, completion: nil)
+        let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [shareText], applicationActivities: nil)
+        
+        activityViewController.popoverPresentationController?.sourceView = (sender as! UIButton)
+        activityViewController.popoverPresentationController?.permittedArrowDirections = []
+        activityViewController.popoverPresentationController?.sourceRect = CGRect(x: 150, y: 150, width: 0, height: 0)
+        
+        self.present(activityViewController, animated: true, completion: nil)
     }
     
     @IBAction func menuPrincipal(_ sender: Any) {
