@@ -21,14 +21,17 @@ class EscribeViewController: UIViewController {
         super.viewDidLoad()
         definesPresentationContext = true
         nuevaPregunta()
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(quitaTeclado))
+        view.addGestureRecognizer(tap)
     }
     
     func nuevaPregunta() {
-        print("Nueva pregunta \(Juego.juego.indiceEscribe)")
         if(Juego.juego.indiceEscribe == 2) { //SI HAY MAS GRUPOS ESTA CONDICIÓN CAMBIA
             self.performSegue(withIdentifier: "resultadoEscribe", sender: self)
         }
         else{
+            tfEscribe.text = ""
             selectedOption = Juego.juego.arrPreguntasEscribe[Juego.juego.indiceEscribe]
             imgPregunta.image = UIImage(named: Juego.juego.arrPreguntasEscribe[Juego.juego.indiceEscribe])
             tvPuntuacion.text = "Score: \(Juego.juego.puntuacionEscribe)"
@@ -88,5 +91,9 @@ class EscribeViewController: UIViewController {
     
     @IBAction func unwindResultEscribe(for segue: UIStoryboardSegue, sender: Any?){
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func quitaTeclado() {
+        view.endEditing(true)
     }
 }

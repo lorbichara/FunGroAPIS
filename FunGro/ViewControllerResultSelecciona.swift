@@ -21,9 +21,6 @@ class ViewControllerResultSelecciona: UIViewController {
     }
     
     @IBAction func btnCompartir(_ sender: Any) {
-        
-        // let image = UIImage(named: "alqueno")
-        
         // set up activity view controller
         let shareText = "Hello World!"
         let activityVC = UIActivityViewController(activityItems: [shareText as Any], applicationActivities: nil)

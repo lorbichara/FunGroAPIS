@@ -17,6 +17,8 @@
 		758DC21A218F7151007A50E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758DC218218F7151007A50E6 /* LaunchScreen.storyboard */; };
 		758DC224218F77B0007A50E6 /* Juego.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758DC223218F77B0007A50E6 /* Juego.swift */; };
 		758DC226218F9E79007A50E6 /* ViewControllerResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758DC225218F9E79007A50E6 /* ViewControllerResult.swift */; };
+		75E0F66D219BBFDB00B536D7 /* gochi-hand in Resources */ = {isa = PBXBuildFile; fileRef = 75E0F66C219BBFDA00B536D7 /* gochi-hand */; };
+		75E0F66F219BC00600B536D7 /* GochiHand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75E0F66E219BC00600B536D7 /* GochiHand-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		758DC21B218F7151007A50E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		758DC223218F77B0007A50E6 /* Juego.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Juego.swift; sourceTree = "<group>"; };
 		758DC225218F9E79007A50E6 /* ViewControllerResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerResult.swift; sourceTree = "<group>"; };
+		75E0F66C219BBFDA00B536D7 /* gochi-hand */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "gochi-hand"; sourceTree = "<group>"; };
+		75E0F66E219BC00600B536D7 /* GochiHand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GochiHand-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +52,7 @@
 		758DC200218F714F007A50E6 = {
 			isa = PBXGroup;
 			children = (
+				75E0F66E219BC00600B536D7 /* GochiHand-Regular.ttf */,
 				758DC20B218F714F007A50E6 /* FunGro */,
 				758DC20A218F714F007A50E6 /* Products */,
 			);
@@ -75,6 +80,7 @@
 				758DC21B218F7151007A50E6 /* Info.plist */,
 				758DC213218F7150007A50E6 /* FunGro.xcdatamodeld */,
 				4D798C6A21935E0600676E4D /* ViewControllerResultSelecciona.swift */,
+				75E0F66C219BBFDA00B536D7 /* gochi-hand */,
 			);
 			path = FunGro;
 			sourceTree = "<group>";
@@ -137,9 +143,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75E0F66D219BBFDB00B536D7 /* gochi-hand in Resources */,
 				758DC21A218F7151007A50E6 /* LaunchScreen.storyboard in Resources */,
 				758DC217218F7151007A50E6 /* Assets.xcassets in Resources */,
 				758DC212218F7150007A50E6 /* Main.storyboard in Resources */,
+				75E0F66F219BC00600B536D7 /* GochiHand-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
