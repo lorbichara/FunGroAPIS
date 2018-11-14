@@ -24,7 +24,7 @@ class ViewControllerResult: UIViewController {
        // let image = UIImage(named: "alqueno")
         
         // set up activity view controller
-        let shareText = "Hello World!"
+        let shareText = "Jugué FunGro en modo escribe y mi puntaje fue: \(String(label))"
         let activityVC = UIActivityViewController(activityItems: [shareText as Any], applicationActivities: nil)
         present(activityVC, animated: true, completion: nil)
     }

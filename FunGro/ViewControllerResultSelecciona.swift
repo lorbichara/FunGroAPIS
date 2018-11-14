@@ -22,7 +22,7 @@ class ViewControllerResultSelecciona: UIViewController {
     
     @IBAction func btnCompartir(_ sender: Any) {
         // set up activity view controller
-        let shareText = "Hello World!"
+        let shareText = "Jugué FunGro en modo selecciona y mi puntaje fue: \(String(label))"
         let activityVC = UIActivityViewController(activityItems: [shareText as Any], applicationActivities: nil)
         present(activityVC, animated: true, completion: nil)
     }
@@ -30,5 +30,4 @@ class ViewControllerResultSelecciona: UIViewController {
     @IBAction func menuPrincipal(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-
 }
