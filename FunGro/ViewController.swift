@@ -106,7 +106,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func nuevaPregunta() {
-        if(Juego.juego.indiceSelecciona == 2) { //SI HAY MAS GRUPOS ESTA CONDICIÓN CAMBIA
+        if(Juego.juego.indiceSelecciona == Juego.juego.arrPreguntasSelecciona.count) { //SI HAY MAS GRUPOS ESTA CONDICIÓN CAMBIA
             Juego.juego.indiceSelecciona = 0
             Juego.juego.intentoSelecciona = 0
             Juego.juego.arrPreguntasSelecciona.shuffle()

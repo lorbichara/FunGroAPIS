@@ -27,7 +27,7 @@ class EscribeViewController: UIViewController {
     }
     
     func nuevaPregunta() {
-        if(Juego.juego.indiceEscribe == 2) { //SI HAY MAS GRUPOS ESTA CONDICIÓN CAMBIA
+        if(Juego.juego.indiceEscribe == Juego.juego.arrPreguntasEscribe.count) { //SI HAY MAS GRUPOS ESTA CONDICIÓN CAMBIA
             Juego.juego.indiceEscribe = 0
             Juego.juego.intentoEscribe = 0
             Juego.juego.arrPreguntasEscribe.shuffle()
