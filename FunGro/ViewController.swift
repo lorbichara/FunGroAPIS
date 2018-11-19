@@ -21,10 +21,17 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.title = "Modo selecciona"
         self.posiblesRespuestas.delegate = self
         self.posiblesRespuestas.dataSource = self
         nuevaPregunta()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let firstImageView = UIImageView(image: UIImage(named: "Diapositiva0.png"))
+        firstImageView.frame = view.frame
+        view.addSubview(firstImageView)
+        view.sendSubviewToBack(firstImageView)
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

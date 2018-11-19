@@ -19,11 +19,19 @@ class EscribeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Modo Escribe"
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(EscribeViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
         definesPresentationContext = true
         nuevaPregunta()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let firstImageView = UIImageView(image: UIImage(named: "Diapositiva0.png"))
+        firstImageView.frame = view.frame
+        view.addSubview(firstImageView)
+        view.sendSubviewToBack(firstImageView)
     }
     
     func nuevaPregunta() {

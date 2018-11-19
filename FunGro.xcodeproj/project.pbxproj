@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4D798C6521932EF900676E4D /* EscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D798C6421932EF900676E4D /* EscribeViewController.swift */; };
 		4D798C6B21935E0600676E4D /* ViewControllerResultSelecciona.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D798C6A21935E0600676E4D /* ViewControllerResultSelecciona.swift */; };
+		5436B54521A355AB003A8F3D /* ViewControllerMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5436B54421A355AB003A8F3D /* ViewControllerMenu.swift */; };
 		75014276219BE5BB006FC627 /* GochiHand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75014275219BE5BB006FC627 /* GochiHand-Regular.ttf */; };
 		758DC20D218F714F007A50E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758DC20C218F714F007A50E6 /* AppDelegate.swift */; };
 		758DC20F218F714F007A50E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758DC20E218F714F007A50E6 /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		4D798C6421932EF900676E4D /* EscribeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscribeViewController.swift; sourceTree = "<group>"; };
 		4D798C6A21935E0600676E4D /* ViewControllerResultSelecciona.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerResultSelecciona.swift; sourceTree = "<group>"; };
+		5436B54421A355AB003A8F3D /* ViewControllerMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMenu.swift; sourceTree = "<group>"; };
 		75014275219BE5BB006FC627 /* GochiHand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GochiHand-Regular.ttf"; sourceTree = "<group>"; };
 		758DC209218F714F007A50E6 /* FunGro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunGro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		758DC20C218F714F007A50E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				758DC20C218F714F007A50E6 /* AppDelegate.swift */,
 				758DC20E218F714F007A50E6 /* ViewController.swift */,
 				758DC210218F7150007A50E6 /* Main.storyboard */,
+				5436B54421A355AB003A8F3D /* ViewControllerMenu.swift */,
 				4D798C6421932EF900676E4D /* EscribeViewController.swift */,
 				758DC225218F9E79007A50E6 /* ViewControllerResult.swift */,
 				758DC223218F77B0007A50E6 /* Juego.swift */,
@@ -165,6 +168,7 @@
 				758DC226218F9E79007A50E6 /* ViewControllerResult.swift in Sources */,
 				4D798C6521932EF900676E4D /* EscribeViewController.swift in Sources */,
 				758DC20D218F714F007A50E6 /* AppDelegate.swift in Sources */,
+				5436B54521A355AB003A8F3D /* ViewControllerMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
