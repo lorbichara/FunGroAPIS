@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -322,23 +323,23 @@
                                     <action selector="enviar:" destination="YRW-Ie-bIB" eventType="touchUpInside" id="LdH-6X-HEJ"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xfd-td-V4z">
-                                <rect key="frame" x="175" y="257" width="418" height="350"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tnu-8y-Hx3">
-                                <rect key="frame" x="233" y="724" width="303" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" red="0.29834505915641785" green="0.66315895318984985" blue="0.83531838655471802" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="textColor" red="0.031372549020000001" green="0.72941176470000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="GochiHand-Regular" family="Gochi Hand" pointSize="30"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Puntuación: " borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" background="acercadebtn" translatesAutoresizingMaskIntoConstraints="NO" id="dMc-SQ-lM8">
                                 <rect key="frame" x="455" y="111" width="238" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.0" green="0.39215686274509803" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="GochiHand-Regular" family="Gochi Hand" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xfd-td-V4z">
+                                <rect key="frame" x="175" y="184" width="418" height="350"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tnu-8y-Hx3">
+                                <rect key="frame" x="234" y="651" width="303" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.29834505915641785" green="0.66315895318984985" blue="0.83531838655471802" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" red="0.031372549020000001" green="0.72941176470000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="GochiHand-Regular" family="Gochi Hand" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -383,14 +384,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="acercadebtn" width="333.60000610351562" height="98.879997253417969"/>
-        <image name="enviarbtn" width="328.79998779296875" height="96"/>
-        <image name="escribebtn" width="331.67999267578125" height="97"/>
-        <image name="logo" width="192" height="103.68000030517578"/>
-        <image name="menubtn" width="330.72000122070312" height="97.919998168945312"/>
-        <image name="playagainbtn" width="332.6400146484375" height="97.919998168945312"/>
-        <image name="seleccionabtn" width="333.60000610351562" height="97.919998168945312"/>
-        <image name="sharebtn" width="330.72000122070312" height="97.919998168945312"/>
+        <image name="acercadebtn" width="695" height="206"/>
+        <image name="enviarbtn" width="685" height="200"/>
+        <image name="escribebtn" width="691" height="202"/>
+        <image name="logo" width="400" height="216"/>
+        <image name="menubtn" width="689" height="204"/>
+        <image name="playagainbtn" width="693" height="204"/>
+        <image name="seleccionabtn" width="695" height="204"/>
+        <image name="sharebtn" width="689" height="204"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Jjj-85-9Fb"/>
