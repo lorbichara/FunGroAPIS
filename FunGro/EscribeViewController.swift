@@ -35,7 +35,8 @@ class EscribeViewController: UIViewController {
     }
     
     func nuevaPregunta() {
-        if(Juego.juego.indiceEscribe == Juego.juego.arrPreguntasEscribe.count) { //SI HAY MAS GRUPOS ESTA CONDICIÓN CAMBIA
+         if(Juego.juego.indiceEscribe == 5) {
+//        if(Juego.juego.indiceEscribe == Juego.juego.arrPreguntasEscribe.count) { //SI HAY MAS GRUPOS ESTA CONDICIÓN CAMBIA
             Juego.juego.indiceEscribe = 0
             Juego.juego.intentoEscribe = 0
             Juego.juego.arrPreguntasEscribe.shuffle()
@@ -47,7 +48,7 @@ class EscribeViewController: UIViewController {
             tfEscribe.text = ""
             selectedOption = Juego.juego.arrPreguntasEscribe[Juego.juego.indiceEscribe]
             imgPregunta.image = UIImage(named: Juego.juego.arrPreguntasEscribe[Juego.juego.indiceEscribe])
-            tvPuntuacion.text = "Score: \(Juego.juego.puntuacionEscribe)"
+            tvPuntuacion.text = "Tu puntaje: \(Juego.juego.puntuacionEscribe)"
         }
     }
     
@@ -88,7 +89,6 @@ class EscribeViewController: UIViewController {
             print(Juego.juego.indiceEscribe)
             Juego.juego.indiceEscribe += 1
             Juego.juego.intentoEscribe = 0
-            print(Juego.juego.indiceEscribe)
             nuevaPregunta()
         }
     }
@@ -106,7 +106,6 @@ class EscribeViewController: UIViewController {
         if(!Juego.juego.volverJugar){
             self.dismiss(animated: true, completion: nil)
         }
-        
     }
     
     @IBAction func quitaTeclado() {

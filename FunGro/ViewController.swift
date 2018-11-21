@@ -113,7 +113,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func nuevaPregunta() {
-        if(Juego.juego.indiceSelecciona == Juego.juego.arrPreguntasSelecciona.count) { //SI HAY MAS GRUPOS ESTA CONDICIÓN CAMBIA
+        if(Juego.juego.indiceSelecciona == 5) {
+//        if(Juego.juego.indiceSelecciona == Juego.juego.arrPreguntasSelecciona.count) { //SI HAY MAS GRUPOS ESTA CONDICIÓN CAMBIA
             Juego.juego.indiceSelecciona = 0
             Juego.juego.intentoSelecciona = 0
             Juego.juego.arrPreguntasSelecciona.shuffle()
@@ -126,7 +127,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         else{
             imgArr = getPickerOptions()
             respuesta.image = UIImage(named: imgArr[0])
-            score.text = "Score: \(Juego.juego.puntuacionSelecciona)"
+            score.text = "Tu puntaje: \(Juego.juego.puntuacionSelecciona)"
             elemento.text = Juego.juego.arrPreguntasSelecciona[Juego.juego.indiceSelecciona]
         }
         
