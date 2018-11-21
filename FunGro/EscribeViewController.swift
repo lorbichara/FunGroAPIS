@@ -69,7 +69,6 @@ class EscribeViewController: UIViewController {
         else if (selectedOption != tfEscribe.text && Juego.juego.intentoEscribe == 0){
             let alert = UIAlertController(title: "Respuesta incorrecta", message: "¡Inténtalo de nuevo!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(alert: UIAlertAction!) in print("Foo")
-                self.navigationController?.popViewController(animated: true)
             }))
             present(alert, animated: true, completion: nil)
             
@@ -83,7 +82,6 @@ class EscribeViewController: UIViewController {
         else {
             let alert = UIAlertController(title: "Respuesta incorrecta", message: "La respuesta es: \(selectedOption). Continua jugando!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(alert: UIAlertAction!) in print("Foo")
-                self.navigationController?.popViewController(animated: true)
             }))
             present(alert, animated: true, completion: nil)
             print(Juego.juego.indiceEscribe)

@@ -88,7 +88,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         else if (selectedOption != elemento.text && Juego.juego.intentoSelecciona == 0){
             let alert = UIAlertController(title: "Respuesta incorrecta", message: "¡Inténtalo de nuevo!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(alert: UIAlertAction!) in print("Foo")
-                self.navigationController?.popViewController(animated: true)
             }))
             present(alert, animated: true, completion: nil)
             
@@ -102,7 +101,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         else {
             let alert = UIAlertController(title: "Respuesta incorrecta", message: "Continua jugando!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(alert: UIAlertAction!) in print("Foo")
-                self.navigationController?.popViewController(animated: true)
             }))
             present(alert, animated: true, completion: nil)
             
