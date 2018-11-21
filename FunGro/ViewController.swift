@@ -91,7 +91,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             Juego.juego.intentoSelecciona = 1
         }
-        else if (selectedOption != elemento.text!.lowercased() && Juego.juego.indiceSelecciona == 1){
+        else if (selectedOption != elemento.text!.lowercased() && Juego.juego.indiceSelecciona == 4){
             Juego.juego.indiceSelecciona += 1
             Juego.juego.intentoSelecciona = 0
             nuevaPregunta()

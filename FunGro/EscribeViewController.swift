@@ -73,7 +73,7 @@ class EscribeViewController: UIViewController {
             
             Juego.juego.intentoEscribe = 1
         }
-        else if ((selectedOption != tfEscribe.text!.lowercased() && Juego.juego.indiceEscribe == 1)){
+        else if ((selectedOption != tfEscribe.text!.lowercased() && Juego.juego.indiceEscribe == 4)){
             Juego.juego.indiceEscribe += 1
             Juego.juego.intentoEscribe = 0
             nuevaPregunta()
@@ -101,7 +101,8 @@ class EscribeViewController: UIViewController {
     
     @IBAction func unwindResultEscribe(for segue: UIStoryboardSegue, sender: Any?){
         if(!Juego.juego.volverJugar){
-            self.dismiss(animated: true, completion: nil)
+            //self.dismiss(animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
         }
     }
     
