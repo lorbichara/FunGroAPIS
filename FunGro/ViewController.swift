@@ -17,7 +17,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var indImg = 0
     var selectedOption = ""
     var imgArr = [String]()
-    //var imgArr = ["alcano", "alqueno", "alquino","amidas", "aminas", "cetonas"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,19 +71,19 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     @IBAction func btnEnviar(_ sender: Any) {
-        if(selectedOption == elemento.text && Juego.juego.intentoSelecciona == 0) {
+        if(selectedOption == elemento.text!.lowercased() && Juego.juego.intentoSelecciona == 0) {
             Juego.juego.puntuacionSelecciona += 10
             Juego.juego.indiceSelecciona += 1
             Juego.juego.intentoSelecciona = 0
             nuevaPregunta()
         }
-        else if (selectedOption == elemento.text && Juego.juego.intentoSelecciona == 1){
+        else if (selectedOption == elemento.text!.lowercased() && Juego.juego.intentoSelecciona == 1){
             Juego.juego.puntuacionSelecciona += 5
             Juego.juego.indiceSelecciona += 1
             Juego.juego.intentoSelecciona = 0
             nuevaPregunta()
         }
-        else if (selectedOption != elemento.text && Juego.juego.intentoSelecciona == 0){
+        else if (selectedOption != elemento.text!.lowercased() && Juego.juego.intentoSelecciona == 0){
             let alert = UIAlertController(title: "Respuesta incorrecta", message: "¡Inténtalo de nuevo!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(alert: UIAlertAction!) in print("Foo")
             }))
@@ -92,7 +91,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             Juego.juego.intentoSelecciona = 1
         }
-        else if (selectedOption != elemento.text && Juego.juego.indiceSelecciona == 1){
+        else if (selectedOption != elemento.text!.lowercased() && Juego.juego.indiceSelecciona == 1){
             Juego.juego.indiceSelecciona += 1
             Juego.juego.intentoSelecciona = 0
             nuevaPregunta()
@@ -116,19 +115,22 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             Juego.juego.intentoSelecciona = 0
             Juego.juego.arrPreguntasSelecciona.shuffle()
             imgArr = getPickerOptions()
-            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+            let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
             
             imageView.image = UIImage(named: imgArr[indImg])
             self.performSegue(withIdentifier: "resultadoSelecciona", sender: self)
         }
-        else{
+        else {
             imgArr = getPickerOptions()
             respuesta.image = UIImage(named: imgArr[0])
             score.text = "Tu puntaje: \(Juego.juego.puntuacionSelecciona)"
-            elemento.text = Juego.juego.arrPreguntasSelecciona[Juego.juego.indiceSelecciona]
+            let s = Juego.juego.arrPreguntasSelecciona[Juego.juego.indiceSelecciona]
+            
+            //To capitalize first letter of string
+            elemento.text = s.prefix(1).uppercased() + s.lowercased().dropFirst()
         }
-        
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vistaResultado = segue.destination as! ViewControllerResultSelecciona
         vistaResultado.label = Juego.juego.puntuacionSelecciona
