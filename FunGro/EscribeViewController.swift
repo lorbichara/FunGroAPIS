@@ -80,7 +80,7 @@ class EscribeViewController: UIViewController {
             nuevaPregunta()
         }
         else {
-            let alert = UIAlertController(title: "Respuesta incorrecta", message: "La respuesta es: \(selectedOption). Continua jugando!", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Respuesta incorrecta", message: "La respuesta es: \(selectedOption). ¡Continúa jugando!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(alert: UIAlertAction!) in print("Foo")
             }))
             present(alert, animated: true, completion: nil)

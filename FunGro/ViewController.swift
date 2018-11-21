@@ -72,7 +72,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     @IBAction func btnEnviar(_ sender: Any) {
-        print(Juego.juego.intentoSelecciona)
         if(selectedOption == elemento.text && Juego.juego.intentoSelecciona == 0) {
             Juego.juego.puntuacionSelecciona += 10
             Juego.juego.indiceSelecciona += 1
@@ -99,7 +98,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             nuevaPregunta()
         }
         else {
-            let alert = UIAlertController(title: "Respuesta incorrecta", message: "Continua jugando!", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Respuesta incorrecta", message: "¡Continúa jugando!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(alert: UIAlertAction!) in print("Foo")
             }))
             present(alert, animated: true, completion: nil)
