@@ -26,8 +26,8 @@ class Juego: Codable {
     init(arrPreguntasEscribe : [String], arrPreguntasSelecciona : [String], puntuacionEscribe : Int, puntuacionSelecciona : Int, indiceEscribe : Int, indiceSelecciona : Int) {
         self.puntuacionEscribe = puntuacionEscribe
         self.puntuacionSelecciona = puntuacionSelecciona
-        self.arrPreguntasEscribe = ["alcano", "alqueno", "alquino", "aldehidos", "amidas", "aminas", "cetonas", "esteres", "eteres"]
-        self.arrPreguntasSelecciona = ["alcano", "alqueno", "alquino", "aldehidos", "amidas", "aminas", "cetonas", "esteres", "eteres"]
+        self.arrPreguntasEscribe = ["acidocarboxilico", "alcano", "alcohol", "aldehido", "alqueno", "alquino", "amida", "amina", "anhidrido","cetona", "ester", "eter", "fenilo", "haluro", "nitrilo", "nitro"]
+        self.arrPreguntasSelecciona = ["acidocarboxilico", "alcano", "alcohol", "aldehido", "alqueno", "alquino", "amida", "amina", "anhidrido","cetona", "ester", "eter", "fenilo", "haluro", "nitrilo", "nitro"]
         self.arrPreguntasEscribe.shuffle()
         self.arrPreguntasSelecciona.shuffle()
         self.indiceEscribe = indiceEscribe
@@ -40,8 +40,8 @@ class Juego: Codable {
     init() {
         self.puntuacionEscribe = 0
         self.puntuacionSelecciona = 0
-        self.arrPreguntasEscribe = ["alcano", "alqueno", "alquino", "aldehidos", "amidas", "aminas", "cetonas", "esteres", "eteres"]
-        self.arrPreguntasSelecciona = ["alcano", "alqueno", "alquino", "aldehidos", "amidas", "aminas", "cetonas", "esteres", "eteres"]
+        self.arrPreguntasEscribe = ["acidocarboxilico", "alcano", "alcohol", "aldehido", "alqueno", "alquino", "amida", "amina", "anhidrido","cetona", "ester", "eter", "fenilo", "haluro", "nitrilo", "nitro"]
+        self.arrPreguntasSelecciona = ["acidocarboxilico", "alcano", "alcohol", "aldehido", "alqueno", "alquino", "amida", "amina", "anhidrido","cetona", "ester", "eter", "fenilo", "haluro", "nitrilo", "nitro"]
         self.arrPreguntasEscribe.shuffle()
         self.arrPreguntasSelecciona.shuffle()
         self.indiceEscribe = 0
