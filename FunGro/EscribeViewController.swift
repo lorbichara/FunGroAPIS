@@ -53,19 +53,23 @@ class EscribeViewController: UIViewController {
     }
     
     @IBAction func enviar(_ sender: Any) {
-        if(selectedOption == tfEscribe.text!.lowercased() && Juego.juego.intentoEscribe == 0) {
+        var textoAComparar = tfEscribe.text
+        textoAComparar = textoAComparar!.lowercased()
+        textoAComparar = textoAComparar!.replacingOccurrences(of: " ", with: "")
+        
+        if(selectedOption == textoAComparar && Juego.juego.intentoEscribe == 0) {
             Juego.juego.puntuacionEscribe += 10
             Juego.juego.indiceEscribe += 1
             Juego.juego.intentoEscribe = 0
             nuevaPregunta()
         }
-        else if (selectedOption == tfEscribe.text!.lowercased() && Juego.juego.intentoEscribe == 1){
+        else if (selectedOption == textoAComparar && Juego.juego.intentoEscribe == 1){
             Juego.juego.puntuacionEscribe += 5
             Juego.juego.indiceEscribe += 1
             Juego.juego.intentoEscribe = 0
             nuevaPregunta()
         }
-        else if (selectedOption != tfEscribe.text!.lowercased() && Juego.juego.intentoEscribe == 0){
+        else if (selectedOption != textoAComparar && Juego.juego.intentoEscribe == 0){
             let alert = UIAlertController(title: "Respuesta incorrecta", message: "¡Inténtalo de nuevo!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {(alert: UIAlertAction!) in print("Foo")
             }))
@@ -73,7 +77,7 @@ class EscribeViewController: UIViewController {
             
             Juego.juego.intentoEscribe = 1
         }
-        else if ((selectedOption != tfEscribe.text!.lowercased() && Juego.juego.indiceEscribe == 4)){
+        else if ((selectedOption != textoAComparar && Juego.juego.indiceEscribe == 4)){
             Juego.juego.indiceEscribe += 1
             Juego.juego.intentoEscribe = 0
             nuevaPregunta()
