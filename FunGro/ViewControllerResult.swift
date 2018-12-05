@@ -34,7 +34,7 @@ class ViewControllerResult: UIViewController {
     
     @IBAction func menuPrincipal(_ sender: Any) {
         Juego.juego.volverJugar = false
-        self.parent?.navigationController?.popToRootViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func voverJugar(_ sender: Any) {

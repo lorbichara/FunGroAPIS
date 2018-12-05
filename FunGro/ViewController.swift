@@ -143,7 +143,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBAction func unwindResultSelecciona(for segue: UIStoryboardSegue, sender: Any?){
         if(!Juego.juego.volverJugar){
-            self.dismiss(animated: true, completion: nil)
+            //self.dismiss(animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
         }
     }
     
